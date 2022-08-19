@@ -9,14 +9,14 @@
 // To install: 
 //   1) Download the Scriptable app.
 //   2) From your iPhone or iPad, save this file to your iCloud Drive > Scriptable folder.
-//   3) In Scriptable, click the "..." at the top right of the tile for Peloton Create Calendar
-//   4) Edit the variables below with your user information (this information is NOT sent anywhere besides the Peloton API)
+//   3) In Scriptable, click the "..." at the top right of the tile for Create Peloton Event.
+//   4) Edit the variables below with your user information (this information is NOT sent anywhere besides the Peloton API).
 //
 // To run:
-//   1) In the Peloton app, schedule a new class -- either Live/Encore or an ondemand schedule it
-//   2) From the class details page that says "you're in", tap the share button at the top right
-//   3) Find "Run Script" with the { } icon in the list and tap that
-//   4) Tap the "Peloton Create Calendar" tile. If it was successful, you will see "Event Created".
+//   1) In the Peloton app, schedule a new class -- either Live/Encore or an ondemand schedule it.
+//   2) From the class details page that says "you're in", tap the share button at the top right.
+//   3) Find "Run Script" with the { } icon in the list and tap that.
+//   4) Tap the "Create Peloton Event" tile. If it was successful, you will see "Event Created".
 //
 // That's it! Let me know what you think! See you on the leaderboard!
 // ***************** //
