@@ -23,6 +23,9 @@
 //   4) Tap the "Create Peloton Event" tile. The first time it runs, it will need to get access to your calendar. Tap OK for this.
 //   5) If it was successful, you will see "Event Created".
 //
+//   NOTE: if you see an error the first time you run about not being able to find a calendar,
+//         force quit both Scriptable and Peloton and try again. This has to do with permissions not refreshing to see the calendars.
+//
 // That's it! Let me know what you think! See you on the leaderboard!
 // ***************** //
 
