@@ -4,7 +4,7 @@ Requires the free [Scriptable App](https://scriptable.app/) available from the i
 
 Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 
-# Installation
+## Installation
 
 1) [Download the Scriptable app](https://apps.apple.com/us/app/scriptable/id1405459188) from the App Store.
 2) From your iPhone or iPad, save this file to your iCloud Drive > Scriptable folder. If you have a Mac
@@ -30,7 +30,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
     and then tap Done. Take care to keep the quotes around your info.
     ![Script editor](/images/setup-09.png?raw=true)                                
 
-# How to Run
+## How to Run
 
 1) In the Peloton app, schedule a new class -- either Live/Encore or an on-demand.
     ![Peloton Scheduled Classes](/images/run-01.png?raw=true) 
@@ -47,7 +47,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 NOTE: if you see an error the first time you run about not being able to find a calendar,
     force quit both Scriptable and Peloton and try again. This has to do with permissions not refreshing to see the calendars.
 
-# Known Limitations / Issues
+## Known Limitations / Issues
 - If the calendar you are adding to is a Google calendar, then your default alerts will be added. Otherwise, unfortunately,
     Scriptable doesn't currently support adding an alert to the calendar item. You'll have to manually modify the event
     after it's added to add the reminder alert.
