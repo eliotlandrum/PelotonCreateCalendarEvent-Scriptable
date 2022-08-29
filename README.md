@@ -7,7 +7,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 ## Installation
 
 1) [Download the Scriptable app](https://apps.apple.com/us/app/scriptable/id1405459188) from the App Store.
-2) From your iPhone or iPad, save this file to your iCloud Drive > Scriptable folder. If you have a Mac
+2) From your iPhone or iPad, save the script file to your iCloud Drive > Scriptable folder. If you have a Mac
     with the same iCloud account, this might be a little easier to do from there.
     1) From the GitHub website with the [script file](https://github.com/eliotlandrum/PelotonCreateCalendarEvent-Scriptable/blob/main/Create%20Peloton%20Event.js)
         visible, if you are on your phone you may see a "...", tap that and then when you see "View raw" or "Raw" buttons.
@@ -38,18 +38,20 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
     ![Peloton Scheduled Class Details](/images/run-02.png?raw=true) 
 3) Find "Run Script" with the { } icon in the list and tap that.
     ![Share Pane](/images/run-03.png?raw=true) 
-4) Tap the "Create Peloton Event" tile. The first time it runs, it will need to get access to your calendar. Tap OK for this.
+4) Tap the "Create Peloton Event" tile.  
     ![Scriptable Scripts](/images/run-04.png?raw=true) 
-5) If it was successful, you will see "Event Created". Tap OK and then check your calendar!
+5) The *first time* you run this script, grant calendar permissions and then
+   force quit both Scriptable and Peloton apps and share the class to the script again.
+   If you get a message about not finding the calendar, be sure to check the calendar permissions in 
+   system Settings under Scriptable and then restarting both applications.
+6) If it was successful, you will see "Event Created". Tap OK and then check your calendar!
     ![Scriptable Scripts](/images/run-05.png?raw=true) 
     ![Scriptable Scripts](/images/run-06.png?raw=true)     
-
-NOTE: if you see an error the first time you run about not being able to find a calendar,
-    force quit both Scriptable and Peloton and try again. This has to do with permissions not refreshing to see the calendars.
 
 ## Known Limitations / Issues
 - If the calendar you are adding to is a Google calendar, then your default alerts will be added. Otherwise, unfortunately,
     Scriptable doesn't currently support adding an alert to the calendar item. You'll have to manually modify the event
     after it's added to add the reminder alert.
+- Some of the classes start at :59 instead of :00 for some reason. I'm looking into why.
 
 That's it! Let me know what you think! See you on the leaderboard!
