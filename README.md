@@ -51,5 +51,6 @@ NOTE: if you see an error the first time you run about not being able to find a 
 - If the calendar you are adding to is a Google calendar, then your default alerts will be added. Otherwise, unfortunately,
     Scriptable doesn't currently support adding an alert to the calendar item. You'll have to manually modify the event
     after it's added to add the reminder alert.
+- Some of the classes start at :59 instead of :00 for some reason. I'm looking into why.
 
 That's it! Let me know what you think! See you on the leaderboard!
