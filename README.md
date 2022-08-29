@@ -38,14 +38,15 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
     ![Peloton Scheduled Class Details](/images/run-02.png?raw=true) 
 3) Find "Run Script" with the { } icon in the list and tap that.
     ![Share Pane](/images/run-03.png?raw=true) 
-4) Tap the "Create Peloton Event" tile. The first time it runs, it will need to get access to your calendar. Tap OK for this.
+4) Tap the "Create Peloton Event" tile.  
     ![Scriptable Scripts](/images/run-04.png?raw=true) 
-5) If it was successful, you will see "Event Created". Tap OK and then check your calendar!
+5) The *first time* you run this script, grant calendar permissions and then
+   force quit both Scriptable and Peloton apps and share the class to the script again.
+   If you get a message about not finding the calendar, be sure to check the calendar permissions in 
+   system Settings under Scriptable and then restarting both applications.
+6) If it was successful, you will see "Event Created". Tap OK and then check your calendar!
     ![Scriptable Scripts](/images/run-05.png?raw=true) 
     ![Scriptable Scripts](/images/run-06.png?raw=true)     
-
-NOTE: if you see an error the first time you run about not being able to find a calendar,
-    force quit both Scriptable and Peloton and try again. This has to do with permissions not refreshing to see the calendars.
 
 ## Known Limitations / Issues
 - If the calendar you are adding to is a Google calendar, then your default alerts will be added. Otherwise, unfortunately,
