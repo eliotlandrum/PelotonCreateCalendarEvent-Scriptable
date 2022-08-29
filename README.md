@@ -7,7 +7,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 ## Installation
 
 1) [Download the Scriptable app](https://apps.apple.com/us/app/scriptable/id1405459188) from the App Store.
-2) From your iPhone or iPad, save this file to your iCloud Drive > Scriptable folder. If you have a Mac
+2) From your iPhone or iPad, save the script file to your iCloud Drive > Scriptable folder. If you have a Mac
     with the same iCloud account, this might be a little easier to do from there.
     1) From the GitHub website with the [script file](https://github.com/eliotlandrum/PelotonCreateCalendarEvent-Scriptable/blob/main/Create%20Peloton%20Event.js)
         visible, if you are on your phone you may see a "...", tap that and then when you see "View raw" or "Raw" buttons.
