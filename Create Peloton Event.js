@@ -38,6 +38,7 @@ const password = "";
 // Release History
 //
 // 1.0 - 2022-08-19 - First release! It works!
+// 1.1 - 2022-08-30 - Add instructor name to title
 //
 // ***************** //
 
@@ -62,7 +63,7 @@ async function createCalendarItem(inviteUrl){
     const description = rideInfo.description + "\n\nInvitation URL: "+inviteUrl;
 
 	let event = new CalendarEvent();
-	event.title = rideInfo.title;
+	event.title = rideInfo.title + " with " + rideInfo.instructor.name;
 	event.startDate = new Date(reservationInfo.scheduled_start_time * 1000);
 	event.endDate = new Date((reservationInfo.scheduled_start_time + rideInfo.duration) * 1000);
 	event.notes = description;
