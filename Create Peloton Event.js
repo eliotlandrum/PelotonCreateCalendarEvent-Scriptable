@@ -31,8 +31,8 @@
 
 // FILL IN THESE VARIABLES WITH YOUR INFO //
 const calendarName = "Home"; // use the name that you see in the Apple Calendar App
-const username = ""; // can be email or Leaderboard name
-const password = "";
+const username = ""; // can be email for Peloton account or Leaderboard name
+const password = ""; // Peloton password
 // ***************** //
 
 // Release History
@@ -60,7 +60,7 @@ async function createCalendarItem(inviteUrl){
     const reservationInfo = await getReservationInfo(reservationId);
 
     //const description = "<p>" + rideInfo.description + "</p><p><a href='"+inviteUrl+"'>Join Class</a></p>";
-    const description = rideInfo.description + "\n\nInvitation URL: "+inviteUrl;
+    const description = rideInfo.description + "\n\nInvitation URL: " + inviteUrl;
 
 	let event = new CalendarEvent();
 	event.title = rideInfo.title + " with " + rideInfo.instructor.name;
@@ -90,12 +90,20 @@ async function createCalendarItem(inviteUrl){
 
 // return rideId and reservationId
 function getRideAndReservationIds(url){
-  const rideId = url.split('/')[5];
-  const reservationId = url.split('/')[6].slice(0, url.split('/')[6].lastIndexOf("?"));
-
-	console.log("rideId: "+ rideId + ", reservationId: " + reservationId);
-
-  return {rideId, reservationId}
+	if(!url) {
+		const alert = new Alert();
+		alert.message = "Don't run this in Scriptable, boo! Run the script from within the Peloton app.";
+		alert.addAction("OK");
+		await alert.presentAlert();
+	}
+	else {
+		const rideId = url.split('/')[5];
+		const reservationId = url.split('/')[6].slice(0, url.split('/')[6].lastIndexOf("?"));
+	  
+		console.log("rideId: "+ rideId + ", reservationId: " + reservationId);
+	  
+		return {rideId, reservationId};
+	}
 }
 
 // authorize with the Peloton app and get a session ID
