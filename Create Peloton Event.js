@@ -93,7 +93,7 @@ async function createCalendarItem(inviteUrl){
 	alert.message = e.message;
 	alert.addAction("OK");
 	await alert.presentAlert();
-    console.log(e.message);
+    logError(e.message);
   }
 }
 
