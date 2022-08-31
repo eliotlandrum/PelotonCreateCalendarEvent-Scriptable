@@ -9,9 +9,10 @@
 // To install: 
 //   1) Download the Scriptable app.
 //   2) From your iPhone or iPad, save this file to your iCloud Drive > Scriptable folder.
+//		- Use Safari, not Google Chrome
 //      - From the GitHub website with this file visible, if you are on your phone you may see a "...",
 //        tap that and then when you see "View raw" or "Raw" buttons, tap and hold until you see a popup menu and preview.
-//        Now, tap "Download Linked File". 
+//        Now, tap "Download Linked File". If you don't see
 //      - In the Files app, you need to move the downloaded file from On My iPhone > Downloads to iCloud Drive > Scriptable.
 //   3) In Scriptable, click the "..." at the top right of the tile for Create Peloton Event.
 //   4) Edit the variables below with your user information (this information is NOT sent anywhere besides the Peloton API).
@@ -31,14 +32,15 @@
 
 // FILL IN THESE VARIABLES WITH YOUR INFO //
 const calendarName = "Home"; // use the name that you see in the Apple Calendar App
-const username = ""; // can be email or Leaderboard name
-const password = "";
+const username = ""; // can be email for Peloton account or Leaderboard name
+const password = ""; // Peloton password
 // ***************** //
 
 // Release History
 //
 // 1.0 - 2022-08-19 - First release! It works!
 // 1.1 - 2022-08-30 - Add instructor name to title
+// 1.2 - 2022-08-30 - Handle trying to run from Scriptable directly
 //
 // ***************** //
 
@@ -53,14 +55,21 @@ Script.complete()
 
 async function createCalendarItem(inviteUrl){
   try {    
+	if (!inviteUrl) {
+		const alert = new Alert();
+		alert.message = "Don't run this in Scriptable, boo! Go back and read the README. Run the script from within the Peloton app.";
+		alert.addAction("OK");
+		await alert.presentAlert();
+		return;
 
+	}
     const {rideId, reservationId} = getRideAndReservationIds(inviteUrl);
 
     const rideInfo = await getRideInfo(rideId);
     const reservationInfo = await getReservationInfo(reservationId);
 
     //const description = "<p>" + rideInfo.description + "</p><p><a href='"+inviteUrl+"'>Join Class</a></p>";
-    const description = rideInfo.description + "\n\nInvitation URL: "+inviteUrl;
+    const description = rideInfo.description + "\n\nInvitation URL: " + inviteUrl;
 
 	let event = new CalendarEvent();
 	event.title = rideInfo.title + " with " + rideInfo.instructor.name;
@@ -84,18 +93,18 @@ async function createCalendarItem(inviteUrl){
 	alert.message = e.message;
 	alert.addAction("OK");
 	await alert.presentAlert();
-    console.log(e.message);
+    logError(e.message);
   }
 }
 
 // return rideId and reservationId
 function getRideAndReservationIds(url){
-  const rideId = url.split('/')[5];
-  const reservationId = url.split('/')[6].slice(0, url.split('/')[6].lastIndexOf("?"));
-
-	console.log("rideId: "+ rideId + ", reservationId: " + reservationId);
-
-  return {rideId, reservationId}
+	const rideId = url.split('/')[5];
+		const reservationId = url.split('/')[6].slice(0, url.split('/')[6].lastIndexOf("?"));
+	  
+		console.log("rideId: "+ rideId + ", reservationId: " + reservationId);
+	  
+		return {rideId, reservationId};
 }
 
 // authorize with the Peloton app and get a session ID

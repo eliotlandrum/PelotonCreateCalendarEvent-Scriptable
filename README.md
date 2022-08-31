@@ -8,7 +8,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 
 1) [Download the Scriptable app](https://apps.apple.com/us/app/scriptable/id1405459188) from the App Store and open it up.
     When you open it up, it creates a folder on your iCloud Drive called "Scriptable".
-2) From your iPhone or iPad, save the script file to your iCloud Drive > Scriptable folder. If you have a Mac
+2) Using Safari, not Google Chrome, from your iPhone or iPad, save the script file to your iCloud Drive > Scriptable folder. If you have a Mac
     with the same iCloud account, this might be a little easier to do from there.
     1) From the GitHub website with the [script file](https://github.com/eliotlandrum/PelotonCreateCalendarEvent-Scriptable/blob/main/Create%20Peloton%20Event.js)
         visible, if you are on your phone you may see a "...", tap that and then when you see "View raw" or "Raw" buttons. 
@@ -43,7 +43,7 @@ Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
 
     ![Scriptable Main Screen](/images/setup-08.png?raw=true)                                
 
-4) Edit the variables with your user information (this information is NOT sent anywhere besides the Peloton API)
+4) Edit the variables with your Peloton user information (this information is NOT sent anywhere besides the Peloton API)
     and then tap Done. Take care to keep the quotes around your info. 
     
     ![Script editor](/images/setup-09.png?raw=true)                                
