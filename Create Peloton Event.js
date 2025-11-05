@@ -41,6 +41,7 @@ const password = ""; // Peloton password
 // 1.0 - 2022-08-19 - First release! It works!
 // 1.1 - 2022-08-30 - Add instructor name to title
 // 1.2 - 2022-08-30 - Handle trying to run from Scriptable directly
+// 1.2.1 - 2025-11-05 - Fix login endpoint URL
 //
 // ***************** //
 
@@ -109,7 +110,7 @@ function getRideAndReservationIds(url){
 
 // authorize with the Peloton app and get a session ID
 async function getSessionId(user,pass){
-  const session = await postToApi("/auth/login",
+  const session = await postToApi("/auth/login?=",
     {"username_or_email": user,
     "password": pass }
     );
