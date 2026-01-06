@@ -1,5 +1,7 @@
 # Peloton Create Calendar Event Scriptable
 
+NOTE: *Currently broken!* Peloton changed the login system and I am unsure of how to fix it at this time. They did bring the calendar functionality back to the app, so at least there's a way you can schedule them again.
+
 Requires the free [Scriptable App](https://scriptable.app/) available from the iOS App Store.
 
 Created by Eliot Landrum <eliot@landrum.cx> #pocketmonster
